@@ -1,0 +1,197 @@
+<style>
+    .ext-form {
+        position: fixed;
+        top: 30%;
+        overflow-y: scroll;
+        height: 400px;
+        right: 10px;
+        background-color: white !important;
+        color: #141c2c !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        padding: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 350px !important;
+        border: 1px solid #f7f7f7 !important;
+        float: right !important;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3) !important;
+        z-index: 10000000 !important;
+    }
+
+    .ext-form>h4 {
+        font-size: 16px !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+
+    }
+
+    .ext-form-group {
+        margin: 10px 0 !important;
+        width: 100% !important;
+    }
+
+    .ext-form-group>label {
+        text-transform: uppercase !important;
+        color: #dbdbdb !important;
+        font-size: 14px !important;
+        opacity: 1 !important;
+
+    }
+
+    .ext-form-control {
+        width: 100% !important;
+        background-color: #f7f7f7 !important;
+        border-radius: 3px !important;
+        border: 0 !important;
+        /* border: 2px solid #ecf2ff !important; */
+        font-size: 16px !important;
+        font-family: inherit !important;
+        padding: 10px !important;
+        margin-top: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .ext-form-control::placeholder {
+        color: #bfbfbf !important;
+        opacity: 1 !important;
+    }
+
+    .ext-btn {
+        cursor: pointer !important;
+        text-transform: uppercase !important;
+        background-color: #141c2c !important;
+        border: 0 !important;
+        border-radius: 3px !important;
+        color: #fff !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-family: inherit !important;
+        font-weight: bold !important;
+        font-size: 14px !important;
+        padding: 10px !important;
+        margin: 20px 0 !important;
+        width: 100% !important;
+    }
+
+    .ext-btn:disabled {
+        background-color: #8c8b8b !important;
+    }
+
+    .ext-none {
+        display: none !important;
+    }
+
+    .ext-close-btn {
+        position: absolute;
+        cursor: pointer;
+        float: right;
+        right: 0;
+        top: 0;
+        border: 0;
+        padding: 10px;
+        font-size: 16px;
+        background-color: white;
+    }
+
+    .ext-new-list-button {
+        float: right !important;
+        margin-bottom: 10px !important;
+        padding: 5px !important;
+        text-decoration: none !important;
+    }
+
+    .ext-auth-div {
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+        float: right !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+</style>
+<form id="ext-form" method="POST" class="ext-form">
+    <div class="ext-close-btn">X</div>
+    <h4 class="ext-title">
+        Learning Made Easy
+    </h4>
+    <div class="ext-forms-div" id="ext-forms-div"></div>
+    <div class="ext-authenticated ext-none">
+        <div class="ext-auth-div">
+            <div class="ext-user"></div>
+            <a href="#" class="ext-logout">Logout</a>
+        </div>
+    </div>
+    <style>
+        .ext-history {
+            width: 100%;
+        }
+        .ext-card {
+            margin-bottom: 10px;
+            width: 100%;
+            background-color: #f7f7f7;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .ext-flex {
+            display: flex;
+        }
+        .ext-card-body {
+            padding: 10px;
+        }
+        .ext-card-top {
+            margin-bottom: 10px;
+        }
+        .ext-card-title {
+            font-size: 20px;
+            padding-bottom: 2px;
+        }
+        .ext-text-muted {
+            color: #7d7d7d;
+        }
+        .ext-origin-link {
+            margin-bottom: 10px;
+        }
+        .ext-card-bottom {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .ext-delete-btn {
+            cursor: pointer;
+            width: 35px;
+            font-size: 20px;
+            padding: 5px;
+            background-color: #d11f1f;
+            color: white;
+            border:0;
+            border-radius: 3px;
+        }
+        .ext-delete-btn:disabled{
+            background-color: #e69c9c;
+        }
+    </style>
+    <div class="ext-history">
+        <div class="ext-card" id=${word.id}>
+            <div class="ext-card-body">
+                <div class="ext-card-top">
+                    <div class="ext-card-title">monopoly</div>
+                    <div class="ext-text-muted"><small>Noun</small></div>
+                </div>
+                <p class="ext-text-muted">the exclusive possession or control of the supply in a trade commodity</p>
+                <a href="#" class="ext-origin-link">define monopoly - Google Search</a>
+                <div class="ext-card-bottom">
+                    <small class="ext-text-muted">8/15/2020, 10:45:57 PM</small>
+                    <button class="ext-delete-btn" id=${word.id}><svg width="1em" height="1em" viewBox="0 0 16 16"
+                            class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                            <path fill-rule="evenodd"
+                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    </div>
+</form>

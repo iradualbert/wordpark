@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Power Extension</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="script" href="https://cdn.jsdelivr.net/npm/dayjs@1.8.33/dayjs.min.js">
+    <style>
+        body {
+            background-color: f7f8fc;
+            color: #141c2c;
+            font-family: Arial, Helvetica, sans-serif;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center; */
+            align-items: center;
+        }
+
+        .container {
+            padding-top: 20px;
+            width: 350px;
+            height: 400px;
+            position: fixed;
+            overflow-y: scroll;
+        }
+
+        .btn:not(.delete-btn) {
+            cursor: pointer;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+
+        .spinner-border {
+            position: absolute;
+        }
+
+        label {
+            text-transform: uppercase !important;
+            color: #dbdbdb;
+            font-size: 14px;
+            opacity: 1;
+        }
+
+        .form-control {
+            border: 0 !important;
+            background-color: #f7f7f7 !important;
+        }
+
+        .form-control::placeholder {
+            color: #bfbfbf;
+            opacity: 1;
+            text-transform: capitalize;
+
+        }
+
+        .toggle-login-signup {
+            display: flex;
+            flex-direction: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .card {
+            border: 0;
+            background-color: #f7f7f7;
+        }
+        .alerts{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: auto;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Word Power</a>
+        <!-- <div class="navbar-nav">
+            <nav class="navbar navbar-light">
+                <a class="nav-item nav-link" href="/login">Albert</a>
+                <a class="nav-item nav-link" href="/register">Logout</a>
+            </nav>
+        </div> -->
+    </nav>
+    <div class="alerts container" id="alerts"></div>
+    <div class="container" id="container">
+    </div>
+    <script src="js/index.js" type="module" ></script>
+</body>
+
+</html>
